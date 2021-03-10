@@ -19,7 +19,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.min.js"></script>
+	<script src="https://kit.fontawesome.com/7183f46867.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/bna4ald.css">
 </head>
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>

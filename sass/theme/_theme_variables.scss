@@ -3,14 +3,17 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: #1B1B1B; // Thats a sample how you could change a BootStrap variable.
 
-$white:	#fff;
-$black:	#000;
+$blue: #102445;
+$lightBlue: #335b9f;
+$darkGrey: #EFFF0D;
+$mauve: #6B7AB0;
+$white: #fff;
+$black: #000;
 
 
-
-$color-list: (white, $white), (black, $black);
+$color-list: (blue, $blue), (lightBlue, $lightBlue), (darkGrey, $darkGrey), (mauve, $mauve), (white, $white), (black, $black);
 
 @each $bkgcolor, $color in $color-list {
     .bkg-#{$bkgcolor} {

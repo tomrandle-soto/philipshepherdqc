@@ -1,5 +1,3 @@
-/* Custom Post Type with Taxonomy */
-
 <?  /*  add_action( 'init', 'register_posttype_post_type' );
 
 function register_posttype_post_type() {
@@ -24,16 +22,15 @@ function register_posttype_post_type() {
 }
 */  ?>
 
- /* Custom Post Type with Taxonomy */
 
- <? /* add_action( 'init', 'register_posttype_post_with_taxonomy' );
+ <?  add_action( 'init', 'register_posttype_cases' );
 
- function register_posttype_post_with_taxonomy() {
-     register_post_type( 'post_with_taxonomy',
+ function register_posttype_cases() {
+     register_post_type( 'cases',
          array(
              'labels' => array(
-                 'name' => __( 'Posts with Taxonomy' ),
-                 'singular_name' => __( 'Post with Taxonomy' )
+                 'name' => __( 'Cases' ),
+                 'singular_name' => __( 'Case' )
              ),
              'exclude_from_search' => false,     // should posttype be excluded from search results
              'publicly_queryable' => true,       // whether post type can be viewed in standard archive listings by postype (usually should be true)
@@ -49,9 +46,9 @@ function register_posttype_post_type() {
      );
 
 
-     register_taxonomy('digital-experiences-category', 'post_with_taxonomy', array(
+     register_taxonomy('cases-category', 'cases', array(
              'labels' => array(
-                 'name' => 'Post with taxonomy categories'
+                 'name' => 'Case Categories'
              ),
              'hierarchical' => true
          )
@@ -59,4 +56,4 @@ function register_posttype_post_type() {
 
 
  }
- */ ?>
+ ?>
