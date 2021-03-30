@@ -1,181 +1,262 @@
 @font-face {
 	font-family: 'corporate_a_bqregular';
-	src: url('../fonts/corporate_a_bq_regular-webfont.woff2') format('woff2'),
-	url('../fonts/corporate_a_bq_regular-webfont.woff') format('woff');
+	src: url("../fonts/corporate_a_bq_regular-webfont.woff2") format('woff2'), url("../fonts/corporate_a_bq_regular-webfont.woff") format('woff');
 	font-weight: normal;
 	font-style: normal;
-
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: europa, sans-serif;
-	color:$darkGrey;
+	color: $darkGrey;
 }
 
 body {
+	font-family: europa, sans-serif;
+	color: $darkGrey;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-
-}
-
-h1, .h1, h2, .h2 {
-	font-size:2.25rem;
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	line-height:1.6em;
-
-	@include media-breakpoint-down(lg) {
-
-	}
-
-	@include media-breakpoint-down(md) {
-
-	}
-
-	@include media-breakpoint-down(sm) {
-		font-size:1.5rem;
-	}
-
-
 }
 
+.h1,
+.h2,
+h1,
+h2 {
+	font-size: 2.25rem;
+	text-transform: uppercase;
+	line-height: 1.6em;
+	position: relative;
+	border-bottom: 1px solid $mauve;
+	padding-left: 17px;
 
-h3, .h3 {
-	font-size:1.75rem;
-	line-height:1.6em;
-
-	@include media-breakpoint-down(lg) {
-
-	}
-
-	@include media-breakpoint-down(md) {
-
-	}
-
-	@include media-breakpoint-down(sm) {
-		font-size:1.25rem;
-	}
-	&.underline {
-		font-size:1.375rem;
+	&:before {
+		position: absolute;
+		left: 0;
+		width: 10px;
+		height: 10px;
+		background-color: $blue;
+		content: '';
+		top: 22px;
+		@include media-breakpoint-down(md) {
+			top: 16px;
+		}
 		@include media-breakpoint-down(sm) {
-			font-size:1.25rem;
+			top: 12px;
 		}
 	}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {
+		font-size: 1.8rem;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 1.4rem;
+		padding-left: 13px;
 
+		&:before {
+			width: 8px;
+			height: 8px;
+		}
+	}
 }
 
-
-h4, .h4 {
-
-
-	@include media-breakpoint-down(lg) {
-
-	}
-
-	@include media-breakpoint-down(md) {
-
-	}
-
+.h3,
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.6em;
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {
-
+		font-size: 1.25rem;
 	}
 
+	&.underline {
+		font-size: 1.375rem;
+		position: relative;
+		margin-bottom: 25px;
 
+		&:after {
+			position: absolute;
+			bottom: -10px;
+			content: '';
+			background-color: $blue;
+			height: 5px;
+			width: 95px;
+			left: 0;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.h4,
+h4 {
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
 }
 
 p {
-	font-size:1.25rem;
-	line-height:1.6em;
-
-	@include media-breakpoint-down(lg) {
-
-	}
-
-	@include media-breakpoint-down(md) {
-
-	}
-
+	font-size: 1.25rem;
+	line-height: 1.4em;
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {
-		font-size:1rem;
+		font-size: 1rem;
 	}
 
 	&.large {
-		font-size:1.625rem;
+		font-size: 1.625rem;
 		@include media-breakpoint-down(sm) {
-			font-size:1.25rem;
+			font-size: 1.25rem;
 		}
-
 	}
-
 }
 
 .contact {
-	font-size:2rem;
+	font-size: 1.75rem;
 	@include media-breakpoint-down(sm) {
-		font-size:1.25rem;
+		font-size: 1.25rem;
 	}
+
 	&.small {
-		font-size:1.375rem;
+		font-size: 1.375rem;
 		@include media-breakpoint-down(sm) {
-			font-size:1rem;
+			font-size: 1rem;
 		}
 	}
 }
 
 .quote {
+	position: relative;
+
 	&.large {
-		font-size:3.5rem;
-		font-weight:300;
-		font-style:italic;
+		font-size: 3.2rem;
+		font-weight: 300;
+		font-style: italic;
+		@include media-breakpoint-down(lg) {
+			font-size: 2.6rem;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: 2rem;
+		}
 		@include media-breakpoint-down(sm) {
-			font-size:1.375rem;
+			font-size: 1.375rem;
+			padding-left: 8px;
 		}
 	}
+
 	&.small {
-		font-size:2.625rem;
+		font-size: 2.625rem;
+		font-weight: 300;
+		font-style: italic;
+		&:before {
+				font-size: 6.5rem;
+				left:-46px;
+				@include media-breakpoint-down(sm) {
+					font-size: 4rem;
+					left: -30px;
+				}
+		}
+		@include media-breakpoint-down(lg) {
+			font-size: 2.2rem;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: 1.75rem;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		top: 5px;
+		left: -52px;
+		content: '“';
+		font-family: 'corporate_a_bqregular';
+		font-size: 8rem;
+		color: $lightBlue;
 		@include media-breakpoint-down(sm) {
-			font-size:1.375rem;
+			font-size: 4rem;
+			left: -20px;
+		}
+	}
+	&.blue_quote {
+			font-weight:500;
+		&:before {
+			color:blue;
 		}
 	}
 }
 
 .quoteauthor {
-	font-size:2rem;
-	font-weight:600;
+	font-size: 1.75rem;
+	font-weight: 600;
+		@include media-breakpoint-down(md) {
+			font-size: 1.35rem;
+		}
 	@include media-breakpoint-down(sm) {
-		font-size:1.125rem;
+		font-size: 1.25rem;
 	}
 }
 
+
+
 .logo {
 	font-family: 'corporate_a_bqregular';
-	font-size:2.875rem;
-	@include media-breakpoint-down(sm) {
-		font-size:1.75rem;
+	font-size: 2.875rem;
+	text-transform: none;
+	@include media-breakpoint-down(lg) {
+		font-size: 2rem;
 	}
+	@include media-breakpoint-down(sm) {
+		font-size: 1.75rem;
+	}
+
 	&.small {
-		font-size:2.625rem;
+		font-size: 2.2rem;
 		@include media-breakpoint-down(sm) {
-			font-size:1.625rem;
+			font-size: 1.625rem;
 		}
 	}
 }
 
 .tags {
-	font-size:1.125rem;
+	font-size: 1.125rem;
 	@include media-breakpoint-down(sm) {
-		font-size:.875rem;
+		font-size: 0.875rem;
 	}
 }
 
 .content h3 {
 	font-size: 1.375rem;
 	@include media-breakpoint-down(sm) {
-		font-size:1.25rem;
+		font-size: 1.25rem;
 	}
 }
 
 .cta {
 	font-size: 1.375rem;
+	background: $blue;
+	color: #fff;
+	padding: 0.5em 1.25em;
+	display: inline-block;
+
+	&.small {
+		padding: 0.25em 1em;
+		font-size: 1.2rem;
+	}
+
+	&:hover {
+		background: $darkGrey;
+		color: #fff;
+	}
 }

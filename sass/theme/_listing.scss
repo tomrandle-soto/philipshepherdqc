@@ -1,0 +1,92 @@
+.searchandfilter ul > li > ul:not(.children) {
+  margin:0px;
+}
+.searchandfilter ul {
+	padding: 0;
+}
+.searchandfilter ul li ul li {
+display:inline-block;
+background:$blue;
+color:#fff;
+margin-right:10px;
+padding:.5em 1em;
+position: relative;
+font-size: 1.1rem;
+&.sf-option-active {
+  background:$darkGrey;
+}
+&:before {
+  content: "\f02b";
+  font-family: "Font Awesome 5 Pro";
+  border: none;
+  font-weight: 500;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  color: $lightBlue;
+  margin-top: -5px;
+}
+}
+
+.searchandfilter input {
+  position: absolute;
+  left: -99999px;
+}
+
+.searchandfilter  {
+  label, select {
+    @include media-breakpoint-down(md) {
+  width:100%;
+}
+}
+}
+
+.searchandfilter li[data-sf-field-input-type="checkbox"] label {
+	padding-left: 0px;
+}
+
+.searchandfilter li[data-sf-field-input-type="checkbox"] label, .searchandfilter li[data-sf-field-input-type="radio"] label, .searchandfilter li[data-sf-field-input-type="range-radio"] label, .searchandfilter li[data-sf-field-input-type="range-checkbox"] label {
+	padding-left: 6px;
+}
+
+/* news */
+
+.news-item-link {
+  border-bottom:1px solid $mauve;
+  h2 {
+    font-size:1.6rem;
+    color:$blue;
+    text-transform: none;
+    padding-left:0px;
+    border:none;
+    &:before
+    {
+      display: none;
+    }
+  }
+
+}
+
+.single_news {
+  h1 {
+    padding-left:0px;
+    border:none;
+    &:before
+    {
+      display: none;
+    }
+  }
+}
+
+.news-items {
+  a {
+    text-decoration: none;
+    &:hover {
+      color:$blue;
+    }
+  }
+}
+
+.further_reading {
+  font-weight:600;
+  font-size: 1.2rem;
+}

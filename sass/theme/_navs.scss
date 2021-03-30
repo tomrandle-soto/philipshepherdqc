@@ -1,0 +1,196 @@
+#wrapper-navbar {
+  border-top: 8px solid $blue;
+  position: relative;
+}
+
+.navbar-nav {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.navbar-expand-sm .navbar-nav .dropdown-menu {
+  @include media-breakpoint-down(md) {
+    position: relative;
+  }
+}
+
+.dropdown-menu {
+  @include media-breakpoint-down(lg) {
+    min-width: 18rem;
+  }
+}
+
+#main-menu {
+  li {
+    a {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: $white;
+      border-right: 1px solid $blue;
+      padding: 0 2.2rem;
+      line-height: 1.1em;
+      @include media-breakpoint-down(lg) {
+        font-size: 1rem;
+        padding: 0 1.25rem;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 0.5em 0;
+        font-size: 1.25rem;
+        text-align: right;
+        border-right: none;
+        border-bottom: 1px solid $blue;
+
+        &:last-child {
+          border-bottom: 1px solid $blue;
+        }
+      }
+
+      &:hover {
+        color: $lightBlue;
+      }
+    }
+
+    &:last-child {
+      a {
+        border: none;
+      }
+    }
+
+    &.current-menu-item {
+      a {
+        color: $lightBlue;
+      }
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Pro";
+  border: none;
+  font-weight: 500;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: $lightBlue;
+  margin-top: -5px;
+}
+
+#main-menu {
+  .dropdown-menu {
+    background-color: $darkGrey;
+    margin: 8px 0 0;
+    padding: 0;
+    right: 0;
+    left: auto;
+    @include media-breakpoint-down(lg) {
+      margin: 8px 0;
+      right: auto;
+    }
+
+    li {
+      a {
+        border-right: 0;
+        border-bottom: 1px solid $blue;
+        padding: 0.75em 1em;
+        @include media-breakpoint-down(lg) {
+          font-size: 1rem;
+
+          white-space: unset;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 1.1rem;
+          padding: 0.75rem 0;
+          white-space: unset;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      &:last-child {
+        a {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  @include media-breakpoint-down(md) {
+    background-color: $darkGrey;
+  }
+}
+
+.navbar-toggler {
+  &:after {
+    font-family: "Font Awesome 5 Pro" !important;
+    content: '\f00d';
+    font-weight: 300;
+    font-size: 1.7rem;
+    right: 0;
+    color: $white;
+  }
+
+  &.collapsed {
+    &:after {
+      content: '\f0c9';
+    }
+  }
+
+  i {
+    font-size: 1.7rem;
+  }
+}
+
+.header-contact {
+  font-size: 1.3rem;
+}
+#practice-nav {
+  padding:0px;
+}
+
+.practice-menu {
+  margin:0px;
+  padding:0px;
+  list-style: none;
+  width:100%;
+  li {
+    margin:0px;
+    padding:0px;
+    width:100%;
+    position: relative;
+    a {
+      padding:10px 8px 10px 0px;
+      border-bottom:1px solid $blue;
+      font-size:1.1rem;
+    }
+    &:after {
+      content: "\f054";
+      font-family: "Font Awesome 5 Pro";
+      font-size: 1.1rem;
+      color: $blue;
+      margin-top: -5px;
+      position: absolute;
+      right:0px;
+      top:15px;
+    }
+    &.active {
+      a {
+        color:$blue;
+      }
+    }}
+  }
+
+  .navbar-practice-nav {
+    background-color: #fff;
+    .navbar-toggler{
+      padding:0px;
+    }
+    .navbar-toggler::after {
+      color:$darkGrey;
+    }
+  }

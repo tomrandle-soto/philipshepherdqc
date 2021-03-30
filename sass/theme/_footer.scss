@@ -1,0 +1,42 @@
+.footer_menu {
+  ul {
+    margin:0px;
+    padding:0px;
+    li {
+      display: inline-block;
+      padding-right:7px;
+      margin-right:5px;
+      border-right:1px solid $lightBlue;
+      a {
+        color:#fff;
+
+      }
+      &:last-child {
+        border-right:none;
+        padding-right:0px;
+        margin-right:0px;
+      }
+    }
+  }
+}
+
+footer {
+  h2 {
+    border-bottom:0px;
+    padding-left: 0px;
+    &:before {
+      width:0px;
+      display: none;
+    }
+  }
+  a {
+    &:hover {
+      color:$lightBlue !important;
+    }
+  }
+}
+hr {
+  &.lightBlue {
+    border-top:1px solid $lightBlue;
+  }
+}

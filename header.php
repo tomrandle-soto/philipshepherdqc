@@ -32,14 +32,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg <? if (! is_front_page()) : ?>bkg-darkGrey<? endif; ?>" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 			</h2>
 
 		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
+			<div class="container-fluid">
 		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
@@ -47,11 +47,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="navbar-brand mb-0 white"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="navbar-brand logo white" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
 						<?php endif; ?>
 
@@ -61,9 +61,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 					<!-- end custom logo -->
+					<a class="d-inline-block d-lg-none ml-auto mr-1 " href="tel:<?php the_field( 'phone', 'option' ); ?>">
+        <i class="fal fa-phone lightBlue header-contact"></i>
+			</a>
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->
@@ -71,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
+						'container_class' => 'collapse navbar-collapse navbar-expand-sm ',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
@@ -84,7 +86,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
-
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->

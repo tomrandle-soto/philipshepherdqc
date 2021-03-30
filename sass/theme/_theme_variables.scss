@@ -5,15 +5,16 @@
 
 $primary: #1B1B1B; // Thats a sample how you could change a BootStrap variable.
 
-$blue: #102445;
-$lightBlue: #335b9f;
-$darkGrey: #EFFF0D;
+$blue: #335BFD;
+$lightBlue: #A3CCFF;
+$lighterBlue: #d4e7ff;
+$darkGrey: #1B1B1B;
 $mauve: #6B7AB0;
 $white: #fff;
 $black: #000;
 
 
-$color-list: (blue, $blue), (lightBlue, $lightBlue), (darkGrey, $darkGrey), (mauve, $mauve), (white, $white), (black, $black);
+$color-list: (blue, $blue), (lightBlue, $lightBlue), (lighterBlue, $lighterBlue), (darkGrey, $darkGrey), (mauve, $mauve), (white, $white), (black, $black);
 
 @each $bkgcolor, $color in $color-list {
     .bkg-#{$bkgcolor} {
@@ -23,6 +24,6 @@ $color-list: (blue, $blue), (lightBlue, $lightBlue), (darkGrey, $darkGrey), (mau
 
 @each $fontcolor, $color in $color-list {
     .#{$fontcolor} {
-        color: $color;
+        color: $color !important;
     }
 }
